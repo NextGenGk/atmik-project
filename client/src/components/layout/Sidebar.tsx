@@ -20,7 +20,6 @@ const NAV: NavItemDef[] = [
   { to: "/", label: "Dashboard", icon: LayoutDashboard, end: true },
   { to: "/inventory", label: "Asset Directory", icon: Boxes },
   { to: "/scanner", label: "Smart Scan", icon: ScanLine },
-  { to: "http://localhost:8000", label: "User Manual", icon: BookOpen as any, external: true },
 ];
 
 function Brand({ collapsed = false }: { collapsed?: boolean }) {
