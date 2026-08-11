@@ -1,0 +1,29 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .barcode-print-area,
+  .barcode-print-area * {
+    visibility: visible;
+  }
+  .barcode-print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90mm;
+    height: 64mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #ffffff !important;
+    border-radius: 8px;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  @page {
+    size: auto;
+    margin: 8mm;
+  }
+}
