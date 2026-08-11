@@ -6,7 +6,6 @@ import { clerkEnabled } from "../../lib/auth";
 import { UserButton, useUser } from "@clerk/clerk-react";
 import { sidebarStore } from "./sidebarStore";
 
-import { BookOpen } from "lucide-react";
 
 interface NavItemDef {
   to: string;
