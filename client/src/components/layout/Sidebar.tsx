@@ -64,8 +64,8 @@ function NavItems({
               rel="noreferrer"
               title={label}
               className={cn(
-                "group flex items-center justify-center gap-3 rounded-xl px-2 py-1.5 text-sm font-semibold transition-all duration-150 lg:justify-start",
-                collapsed && "lg:justify-center",
+                "group flex items-center justify-start gap-3 rounded-xl px-2 py-1.5 text-sm font-semibold transition-all duration-150",
+                collapsed && "justify-center",
                 "text-secondary hover:bg-subtle hover:text-primary"
               )}
             >
@@ -88,8 +88,8 @@ function NavItems({
             title={label}
             className={({ isActive }) =>
               cn(
-                "group flex items-center justify-center gap-3 rounded-xl px-2 py-1.5 text-sm font-semibold transition-all duration-150 lg:justify-start",
-                collapsed && "lg:justify-center",
+                "group flex items-center justify-start gap-3 rounded-xl px-2 py-1.5 text-sm font-semibold transition-all duration-150",
+                collapsed && "justify-center",
                 isActive
                   ? "bg-accent-600 text-on-accent shadow-[0_4px_12px_rgba(37,99,235,0.35)]"
                   : "text-secondary hover:bg-subtle hover:text-primary"
@@ -193,7 +193,7 @@ export function MobileDrawer({
         className="absolute inset-0 bg-overlay animate-[fade-in_0.15s_ease-out]"
         onClick={onClose}
       />
-      <div className="absolute inset-y-0 left-0 flex w-[280px] flex-col border-r border-line-subtle bg-surface animate-[scale-in_0.2s_ease-out]">
+      <div className="absolute inset-y-0 right-0 flex w-[280px] flex-col border-l border-line-subtle bg-surface animate-[scale-in_0.2s_ease-out]">
         <div className="flex h-16 items-center justify-between border-b border-line-subtle px-4">
           <Brand />
           <button
