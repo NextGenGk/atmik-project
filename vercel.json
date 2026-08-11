@@ -2,6 +2,18 @@
   "version": 2,
   "buildCommand": "npm --prefix client run build",
   "outputDirectory": "client/dist",
+  "build": {
+    "env": {
+      "VITE_CLERK_PUBLISHABLE_KEY": "pk_test_Y2hhbXBpb24tYW5jaG92eS0xMS5jbGVyay5hY2NvdW50cy5kZXYk",
+      "VITE_SITEBOT_SCRIPT_URL": "https://www.sitebot.online/embed.js",
+      "VITE_SITEBOT_NAMESPACE": "atmikbharat-com-1786444078580"
+    }
+  },
+  "env": {
+    "MONGO_URI": "mongodb+srv://Gaurav-Kumar:xO5G7zUZzCduImCj@atmik-project.g4qbyk3.mongodb.net/?appName=atmik-project",
+    "CLERK_SECRET_KEY": "sk_test_ydYPSZeypHH2MDoQuXCtoVpPJNem3uqWP8bs3X5U7b",
+    "NODE_ENV": "production"
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",
