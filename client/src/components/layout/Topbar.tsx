@@ -38,15 +38,6 @@ export function Topbar({ title, subtitle, onMenu, actions }: TopbarProps) {
     <>
       <header className="sticky top-0 z-40 flex h-16 items-center gap-3 border-b border-line-subtle bg-glass px-4 backdrop-blur-md sm:px-6">
 
-        <button
-          onClick={handleMenuClick}
-          title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-          aria-label="Toggle navigation menu"
-          className="md:hidden flex size-9 shrink-0 items-center justify-center rounded-lg border border-line bg-raised text-secondary transition-colors hover:bg-subtle hover:text-primary"
-        >
-          <Menu className="size-4.5" />
-        </button>
-
         <div className="flex items-center gap-2.5 min-w-0 flex-1">
           <div className="flex shrink-0 items-center justify-center md:hidden">
             <img
@@ -96,6 +87,15 @@ export function Topbar({ title, subtitle, onMenu, actions }: TopbarProps) {
         >
           <ScanLine className="size-4" />
           <span className="hidden sm:inline">Smart Scan</span>
+        </button>
+
+        <button
+          onClick={handleMenuClick}
+          title={sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
+          aria-label="Toggle navigation menu"
+          className="md:hidden flex size-9 shrink-0 items-center justify-center rounded-lg border border-line bg-raised text-secondary transition-colors hover:bg-subtle hover:text-primary"
+        >
+          <Menu className="size-4.5" />
         </button>
       </header>
 
